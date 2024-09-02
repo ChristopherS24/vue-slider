@@ -53,5 +53,23 @@ createApp ({
                     ],
                     i:0
         }
+    },
+    methods:{
+        nextImage() {
+            if(this.i < this.slides.length - 1) {
+                this.i++;
+            }
+            else {
+                this.i=0;
+            }
+        },
+        prevImage() {
+            if(this.i > 0) {
+                this.i--;
+            }
+            else {
+                this.i= this.slides.length - 1;
+            }
+        }
     }
 }).mount('#app');
